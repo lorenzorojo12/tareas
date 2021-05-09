@@ -15,7 +15,7 @@ class CreateTareasTable extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tarea');
+            $table->string('description');
             //creamos la clave foranea de usuarios para que cada usuario pueda visualizar sus tareas cuando incie sesion
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
